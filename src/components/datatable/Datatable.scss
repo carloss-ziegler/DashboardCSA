@@ -1,0 +1,111 @@
+.datatable {
+  height: 600px;
+  padding: 20px;
+
+  .datatableTitle {
+    width: 100%;
+    font-size: 24px;
+    color: #808080;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn svg {
+      transition: 2s;
+    }
+    .btn:hover svg {
+      transform: rotate(-360deg);
+    }
+
+    .link {
+      text-decoration: none;
+      color: #048444;
+      font-size: 22px;
+      border: 1px solid #048444;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .link:hover {
+      background-color: #04844435;
+    }
+  }
+
+  .cellWithImg {
+    display: flex;
+    align-items: center;
+
+    .cellImg {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+  }
+
+  .cellWithStatus {
+    padding: 5px;
+    border-radius: 5px;
+
+    &.Finalizado {
+      color: #048444;
+      background-color: rgba(0, 128, 0, 0.05);
+    }
+    &.Retirada {
+      color: #1c93fc;
+      background-color: #1c93fc23;
+    }
+    &.Pendente {
+      color: #daa520;
+      background-color: rgba(255, 217, 0, 0.308);
+    }
+    &.Entrega {
+      color: #880000;
+      background-color: rgba(255, 0, 0, 0.247);
+    }
+    &.Cancelado {
+      color: #000;
+      background-color: #04040485;
+    }
+  }
+
+  .cellAction {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .viewButton {
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: #1c94fc;
+      border: 1px solid #1c93fc67;
+    }
+    .deleteButton {
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: #e91034;
+      border: 1px solid #e9103481;
+    }
+    .viewButton:hover {
+      font-weight: bold;
+      background-color: #1c94fc67;
+    }
+    .deleteButton:hover {
+      font-weight: bold;
+      background-color: #e9103481;
+    }
+  }
+}

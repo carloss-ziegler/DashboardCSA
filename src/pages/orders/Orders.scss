@@ -1,0 +1,17 @@
+.orders {
+  display: flex;
+
+  .ordersContainer {
+    flex: 6;
+
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80%;
+      font-size: 40px;
+      font-weight: bold;
+      color: #048444;
+    }
+  }
+}

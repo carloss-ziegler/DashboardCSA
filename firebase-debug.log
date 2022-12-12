@@ -1,0 +1,90 @@
+[debug] [2022-12-12T21:22:29.973Z] ----------------------------------------------------------------------
+[debug] [2022-12-12T21:22:29.976Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-12-12T21:22:29.977Z] CLI Version:   11.17.0
+[debug] [2022-12-12T21:22:29.978Z] Platform:      win32
+[debug] [2022-12-12T21:22:29.978Z] Node Version:  v18.12.1
+[debug] [2022-12-12T21:22:29.980Z] Time:          Mon Dec 12 2022 18:22:29 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-12-12T21:22:29.980Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-12T21:22:30.108Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-12T21:22:30.109Z] > authorizing via signed-in user (chziegler445@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ziegler\Desktop\Dashboard-main
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-12-12T21:23:09.246Z] Using project from CLI flag: dashboard-marmoreli
+[debug] [2022-12-12T21:23:09.252Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dashboard-marmoreli [none]
+[debug] [2022-12-12T21:23:10.171Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dashboard-marmoreli 200
+[debug] [2022-12-12T21:23:10.171Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dashboard-marmoreli {"projectId":"dashboard-marmoreli","projectNumber":"317041427097","displayName":"dashboard-marmoreli","name":"projects/dashboard-marmoreli","resources":{"hostingSite":"dashboard-marmoreli","storageBucket":"dashboard-marmoreli.appspot.com","locationId":"southamerica-east1"},"state":"ACTIVE","etag":"1_e4ff3151-13fb-4608-afaf-2e9f665c484f"}
+[info] i  Using project dashboard-marmoreli (dashboard-marmoreli) 
+[info] 
+=== Firestore Setup
+[debug] [2022-12-12T21:23:10.204Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/dashboard-marmoreli/services/firestore.googleapis.com [none]
+[debug] [2022-12-12T21:23:10.205Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/dashboard-marmoreli/services/firestore.googleapis.com x-goog-quota-user=projects/dashboard-marmoreli
+[debug] [2022-12-12T21:23:11.798Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/dashboard-marmoreli/services/firestore.googleapis.com 200
+[debug] [2022-12-12T21:23:11.798Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/dashboard-marmoreli/services/firestore.googleapis.com [omitted]
+[debug] [2022-12-12T21:23:11.800Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/dashboard-marmoreli [none]
+[debug] [2022-12-12T21:23:12.770Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/dashboard-marmoreli 200
+[debug] [2022-12-12T21:23:12.771Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/dashboard-marmoreli {"name":"apps/dashboard-marmoreli","id":"dashboard-marmoreli","authDomain":"gmail.com","locationId":"southamerica-east1","codeBucket":"staging.dashboard-marmoreli.appspot.com","servingStatus":"SERVING","defaultHostname":"dashboard-marmoreli.rj.r.appspot.com","defaultBucket":"dashboard-marmoreli.appspot.com","serviceAccount":"dashboard-marmoreli@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-12-12T21:23:12.771Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-12-12T21:23:12.772Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-12T21:23:12.773Z] > authorizing via signed-in user (chziegler445@gmail.com)
+[debug] [2022-12-12T21:23:12.773Z] [iam] checking project dashboard-marmoreli for permissions ["firebase.projects.get"]
+[debug] [2022-12-12T21:23:12.775Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions [none]
+[debug] [2022-12-12T21:23:12.775Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions x-goog-quota-user=projects/dashboard-marmoreli
+[debug] [2022-12-12T21:23:12.775Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-12-12T21:23:13.916Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions 200
+[debug] [2022-12-12T21:23:13.917Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-12-12T21:23:28.344Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases pageSize=10&pageToken=
+[debug] [2022-12-12T21:23:30.148Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases 200
+[debug] [2022-12-12T21:23:30.149Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases {"releases":[{"name":"projects/dashboard-marmoreli/releases/cloud.firestore","rulesetName":"projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76","createTime":"2022-06-14T05:06:50.840625Z","updateTime":"2022-06-14T05:07:36.130637Z"},{"name":"projects/dashboard-marmoreli/releases/firebase.storage/dashboard-marmoreli.appspot.com","rulesetName":"projects/dashboard-marmoreli/rulesets/0134fd53-c3dd-4251-8205-d91032c95a6e","createTime":"2022-06-14T20:00:42.731005Z","updateTime":"2022-06-14T20:00:55.488158Z"}]}
+[debug] [2022-12-12T21:23:30.194Z] Found ruleset: projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76
+[debug] [2022-12-12T21:23:30.195Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76 [none]
+[debug] [2022-12-12T21:23:30.776Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76 200
+[debug] [2022-12-12T21:23:30.776Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-12-12T21:23:43.789Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-12-12T21:23:43.792Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
+[debug] [2022-12-12T21:23:44.300Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
+[debug] [2022-12-12T21:23:44.300Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/dashboard-marmoreli/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2022-12-12T21:23:44.302Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-12-12T21:23:44.302Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2022-12-12T21:23:44.306Z] Error: EISDIR: illegal operation on a directory, open 'C:\Users\Ziegler\Desktop\Dashboard-main\build'
+    at Object.openSync (node:fs:600:3)
+    at Object.writeFileSync (node:fs:2221:35)
+    at Object.createFileSync (C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:63:6)
+    at Config.writeProjectFile (C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:152:12)
+    at C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\indexes.js:51:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async doSetup (C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\index.js:36:5)
+    at async init (C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: An unexpected error has occurred.
