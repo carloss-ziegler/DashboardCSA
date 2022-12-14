@@ -28,18 +28,7 @@ const Navbar = () => {
             <LanguageIcon className="icon" />
             <span>Português</span>
           </div>
-          <div className="mr-10 cursor-pointer">
-            <DarkModeIcon className="icon" />
-          </div>
-          <div className="mr-10 cursor-pointer">
-            <NotificationsNoneIcon className="icon" />
-          </div>
-          <div className="mr-10 cursor-pointer">
-            <ChatBubbleOutlineIcon className="icon" />
-          </div>
-          <div className="mr-10 cursor-pointer">
-            <FormatListBulletedIcon className="icon" />
-          </div>
+
           <div className="mr-10 cursor-pointer">
             <img
               src={require("../../assets/csa.jpg")}
@@ -59,7 +48,7 @@ const Navbar = () => {
                 }
               }}
             >
-              <LogoutIcon className="icon" />
+              <LogoutIcon className="icon" /> Sair
             </button>
           </div>
         </div>

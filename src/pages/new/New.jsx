@@ -68,18 +68,25 @@ const New = ({ inputs, title, icon, table, page }) => {
 
   const createUser = async (e) => {
     e.preventDefault();
-    try {
-      await addDoc(collection(db, table), {
-        ...data,
-        timeStamp: serverTimestamp(),
-      });
 
-      toast.success("Cadastro adicionado com sucesso!", {
-        theme: "dark",
+    if (file && data) {
+      try {
+        await addDoc(collection(db, table), {
+          ...data,
+          timeStamp: serverTimestamp(),
+        });
+
+        toast.success("Cadastro adicionado com sucesso!", {
+          theme: "colored",
+        });
+        navigate(`/${page}`);
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      toast.info("Preencha todos os campos!", {
+        theme: "colored",
       });
-      navigate(`/${page}`);
-    } catch (err) {
-      console.log(err);
     }
   };
 
@@ -90,6 +97,7 @@ const New = ({ inputs, title, icon, table, page }) => {
       <div className="newContainer">
         <Navbar />
         <div className="top">
+          <button onClick={() => navigate("/users")}>Voltar</button>
           <h1>
             {title} {icon}
           </h1>

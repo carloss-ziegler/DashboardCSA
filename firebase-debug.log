@@ -1,90 +1,106 @@
-[debug] [2022-12-12T21:22:29.973Z] ----------------------------------------------------------------------
-[debug] [2022-12-12T21:22:29.976Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2022-12-12T21:22:29.977Z] CLI Version:   11.17.0
-[debug] [2022-12-12T21:22:29.978Z] Platform:      win32
-[debug] [2022-12-12T21:22:29.978Z] Node Version:  v18.12.1
-[debug] [2022-12-12T21:22:29.980Z] Time:          Mon Dec 12 2022 18:22:29 GMT-0300 (Horário Padrão de Brasília)
-[debug] [2022-12-12T21:22:29.980Z] ----------------------------------------------------------------------
+[debug] [2022-12-12T21:29:11.196Z] ----------------------------------------------------------------------
+[debug] [2022-12-12T21:29:11.200Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-12-12T21:29:11.201Z] CLI Version:   11.17.0
+[debug] [2022-12-12T21:29:11.201Z] Platform:      win32
+[debug] [2022-12-12T21:29:11.201Z] Node Version:  v18.12.1
+[debug] [2022-12-12T21:29:11.203Z] Time:          Mon Dec 12 2022 18:29:11 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-12-12T21:29:11.203Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2022-12-12T21:22:30.108Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2022-12-12T21:22:30.109Z] > authorizing via signed-in user (chziegler445@gmail.com)
+[debug] [2022-12-12T21:29:11.371Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-12T21:29:11.373Z] > authorizing via signed-in user (chziegler445@gmail.com)
+[debug] [2022-12-12T21:29:11.373Z] [iam] checking project dashboard-marmoreli for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2022-12-12T21:29:11.381Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions [none]
+[debug] [2022-12-12T21:29:11.381Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions x-goog-quota-user=projects/dashboard-marmoreli
+[debug] [2022-12-12T21:29:11.382Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2022-12-12T21:29:13.116Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions 200
+[debug] [2022-12-12T21:29:13.118Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2022-12-12T21:29:13.124Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dashboard-marmoreli [none]
+[debug] [2022-12-12T21:29:13.765Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dashboard-marmoreli 200
+[debug] [2022-12-12T21:29:13.766Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dashboard-marmoreli {"projectId":"dashboard-marmoreli","projectNumber":"317041427097","displayName":"dashboard-marmoreli","name":"projects/dashboard-marmoreli","resources":{"hostingSite":"dashboard-marmoreli","storageBucket":"dashboard-marmoreli.appspot.com","locationId":"southamerica-east1"},"state":"ACTIVE","etag":"1_e4ff3151-13fb-4608-afaf-2e9f665c484f"}
 [info] 
-     ######## #### ########  ######## ########     ###     ######  ########
-     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
-     ######    ##  ########  ######   ########  #########  ######  ######
-     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
-     ##       #### ##     ## ######## ########  ##     ##  ######  ########
-
-You're about to initialize a Firebase project in this directory:
-
-  C:\Users\Ziegler\Desktop\Dashboard-main
-
-Before we get started, keep in mind:
-
-  * You are initializing within an existing Firebase project directory
-
+[info] === Deploying to 'dashboard-marmoreli'...
 [info] 
-=== Project Setup
-[info] 
-[info] First, let's associate this project directory with a Firebase project.
-[info] You can create multiple project aliases by running firebase use --add, 
-[info] but for now we'll just set up a default project.
-[info] 
-[debug] [2022-12-12T21:23:09.246Z] Using project from CLI flag: dashboard-marmoreli
-[debug] [2022-12-12T21:23:09.252Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dashboard-marmoreli [none]
-[debug] [2022-12-12T21:23:10.171Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dashboard-marmoreli 200
-[debug] [2022-12-12T21:23:10.171Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dashboard-marmoreli {"projectId":"dashboard-marmoreli","projectNumber":"317041427097","displayName":"dashboard-marmoreli","name":"projects/dashboard-marmoreli","resources":{"hostingSite":"dashboard-marmoreli","storageBucket":"dashboard-marmoreli.appspot.com","locationId":"southamerica-east1"},"state":"ACTIVE","etag":"1_e4ff3151-13fb-4608-afaf-2e9f665c484f"}
-[info] i  Using project dashboard-marmoreli (dashboard-marmoreli) 
-[info] 
-=== Firestore Setup
-[debug] [2022-12-12T21:23:10.204Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/dashboard-marmoreli/services/firestore.googleapis.com [none]
-[debug] [2022-12-12T21:23:10.205Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/dashboard-marmoreli/services/firestore.googleapis.com x-goog-quota-user=projects/dashboard-marmoreli
-[debug] [2022-12-12T21:23:11.798Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/dashboard-marmoreli/services/firestore.googleapis.com 200
-[debug] [2022-12-12T21:23:11.798Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/dashboard-marmoreli/services/firestore.googleapis.com [omitted]
-[debug] [2022-12-12T21:23:11.800Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/dashboard-marmoreli [none]
-[debug] [2022-12-12T21:23:12.770Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/dashboard-marmoreli 200
-[debug] [2022-12-12T21:23:12.771Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/dashboard-marmoreli {"name":"apps/dashboard-marmoreli","id":"dashboard-marmoreli","authDomain":"gmail.com","locationId":"southamerica-east1","codeBucket":"staging.dashboard-marmoreli.appspot.com","servingStatus":"SERVING","defaultHostname":"dashboard-marmoreli.rj.r.appspot.com","defaultBucket":"dashboard-marmoreli.appspot.com","serviceAccount":"dashboard-marmoreli@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
-[debug] [2022-12-12T21:23:12.771Z] database_type: CLOUD_FIRESTORE
-[debug] [2022-12-12T21:23:12.772Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2022-12-12T21:23:12.773Z] > authorizing via signed-in user (chziegler445@gmail.com)
-[debug] [2022-12-12T21:23:12.773Z] [iam] checking project dashboard-marmoreli for permissions ["firebase.projects.get"]
-[debug] [2022-12-12T21:23:12.775Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions [none]
-[debug] [2022-12-12T21:23:12.775Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions x-goog-quota-user=projects/dashboard-marmoreli
-[debug] [2022-12-12T21:23:12.775Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions {"permissions":["firebase.projects.get"]}
-[debug] [2022-12-12T21:23:13.916Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions 200
-[debug] [2022-12-12T21:23:13.917Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dashboard-marmoreli:testIamPermissions {"permissions":["firebase.projects.get"]}
-[info] 
-[info] Firestore Security Rules allow you to define how and when to allow
-[info] requests. You can keep these rules in your project directory
-[info] and publish them with firebase deploy.
-[info] 
-[debug] [2022-12-12T21:23:28.344Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases pageSize=10&pageToken=
-[debug] [2022-12-12T21:23:30.148Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases 200
-[debug] [2022-12-12T21:23:30.149Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases {"releases":[{"name":"projects/dashboard-marmoreli/releases/cloud.firestore","rulesetName":"projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76","createTime":"2022-06-14T05:06:50.840625Z","updateTime":"2022-06-14T05:07:36.130637Z"},{"name":"projects/dashboard-marmoreli/releases/firebase.storage/dashboard-marmoreli.appspot.com","rulesetName":"projects/dashboard-marmoreli/rulesets/0134fd53-c3dd-4251-8205-d91032c95a6e","createTime":"2022-06-14T20:00:42.731005Z","updateTime":"2022-06-14T20:00:55.488158Z"}]}
-[debug] [2022-12-12T21:23:30.194Z] Found ruleset: projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76
-[debug] [2022-12-12T21:23:30.195Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76 [none]
-[debug] [2022-12-12T21:23:30.776Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76 200
-[debug] [2022-12-12T21:23:30.776Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76 [omitted]
-[info] 
-[info] Firestore indexes allow you to perform complex queries while
-[info] maintaining performance that scales with the size of the result
-[info] set. You can keep index definitions in your project directory
-[info] and publish them with firebase deploy.
-[info] 
-[debug] [2022-12-12T21:23:43.789Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/indexes [none]
-[debug] [2022-12-12T21:23:43.792Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
-[debug] [2022-12-12T21:23:44.300Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
-[debug] [2022-12-12T21:23:44.300Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/dashboard-marmoreli/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
-[debug] [2022-12-12T21:23:44.302Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/indexes 200
-[debug] [2022-12-12T21:23:44.302Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/indexes {}
-[debug] [2022-12-12T21:23:44.306Z] Error: EISDIR: illegal operation on a directory, open 'C:\Users\Ziegler\Desktop\Dashboard-main\build'
-    at Object.openSync (node:fs:600:3)
-    at Object.writeFileSync (node:fs:2221:35)
-    at Object.createFileSync (C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:63:6)
-    at Config.writeProjectFile (C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:152:12)
-    at C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\indexes.js:51:27
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async doSetup (C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\index.js:36:5)
-    at async init (C:\Users\Ziegler\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
-[error] 
-[error] Error: An unexpected error has occurred.
+[info] i  deploying storage, firestore, hosting 
+[debug] [2022-12-12T21:29:13.775Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/dashboard-marmoreli [none]
+[debug] [2022-12-12T21:29:14.423Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/dashboard-marmoreli 200
+[debug] [2022-12-12T21:29:14.424Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/dashboard-marmoreli {"name":"apps/dashboard-marmoreli","id":"dashboard-marmoreli","authDomain":"gmail.com","locationId":"southamerica-east1","codeBucket":"staging.dashboard-marmoreli.appspot.com","servingStatus":"SERVING","defaultHostname":"dashboard-marmoreli.rj.r.appspot.com","defaultBucket":"dashboard-marmoreli.appspot.com","serviceAccount":"dashboard-marmoreli@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2022-12-12T21:29:14.434Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli:test [none]
+[debug] [2022-12-12T21:29:14.434Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli:test [omitted]
+[debug] [2022-12-12T21:29:15.721Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli:test 200
+[debug] [2022-12-12T21:29:15.722Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli:test {}
+[info] +  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2022-12-12T21:29:15.730Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli:test [none]
+[debug] [2022-12-12T21:29:15.730Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli:test [omitted]
+[debug] [2022-12-12T21:29:16.756Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli:test 200
+[debug] [2022-12-12T21:29:16.757Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2022-12-12T21:29:16.766Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dashboard-marmoreli/versions [none]
+[debug] [2022-12-12T21:29:16.766Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dashboard-marmoreli/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-12-12T21:29:18.265Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dashboard-marmoreli/versions 200
+[debug] [2022-12-12T21:29:18.266Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dashboard-marmoreli/versions {"name":"projects/317041427097/sites/dashboard-marmoreli/versions/f54a646984894bb4","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-12-12T21:29:18.271Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases pageSize=10&pageToken=
+[debug] [2022-12-12T21:29:19.327Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases 200
+[debug] [2022-12-12T21:29:19.327Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases {"releases":[{"name":"projects/dashboard-marmoreli/releases/cloud.firestore","rulesetName":"projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76","createTime":"2022-06-14T05:06:50.840625Z","updateTime":"2022-06-14T05:07:36.130637Z"},{"name":"projects/dashboard-marmoreli/releases/firebase.storage/dashboard-marmoreli.appspot.com","rulesetName":"projects/dashboard-marmoreli/rulesets/0134fd53-c3dd-4251-8205-d91032c95a6e","createTime":"2022-06-14T20:00:42.731005Z","updateTime":"2022-06-14T20:00:55.488158Z"}]}
+[debug] [2022-12-12T21:29:19.387Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/0134fd53-c3dd-4251-8205-d91032c95a6e [none]
+[debug] [2022-12-12T21:29:21.568Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/0134fd53-c3dd-4251-8205-d91032c95a6e 200
+[debug] [2022-12-12T21:29:21.568Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/0134fd53-c3dd-4251-8205-d91032c95a6e [omitted]
+[info] i  storage: uploading rules storage.rules... 
+[debug] [2022-12-12T21:29:21.572Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets [none]
+[debug] [2022-12-12T21:29:21.572Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets [omitted]
+[debug] [2022-12-12T21:29:22.851Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets 200
+[debug] [2022-12-12T21:29:22.851Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets {"name":"projects/dashboard-marmoreli/rulesets/8e6e9a65-b124-4bec-bab6-1708e43f8586","source":{"files":[{"content":"rules_version = '2';\nservice firebase.storage {\n  match /b/{bucket}/o {\n    match /{allPaths=**} {\n      allow read, write: if false;\n    }\n  }\n}\n","name":"storage.rules"}]},"createTime":"2022-12-12T21:29:22.023311Z","metadata":{"services":["firebase.storage"]}}
+[debug] [2022-12-12T21:29:22.852Z] [rules] created ruleset projects/dashboard-marmoreli/rulesets/8e6e9a65-b124-4bec-bab6-1708e43f8586
+[debug] [2022-12-12T21:29:22.856Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases pageSize=10&pageToken=
+[debug] [2022-12-12T21:29:22.861Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-12-12T21:29:23.799Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-12-12T21:29:23.800Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2022-12-12T21:29:23.801Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
+[debug] [2022-12-12T21:29:24.165Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
+[debug] [2022-12-12T21:29:24.166Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/dashboard-marmoreli/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/dashboard-marmoreli/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] +  firestore: deployed indexes in firestore.indexes.json successfully 
+[debug] [2022-12-12T21:29:24.397Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases 200
+[debug] [2022-12-12T21:29:24.398Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/releases {"releases":[{"name":"projects/dashboard-marmoreli/releases/cloud.firestore","rulesetName":"projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76","createTime":"2022-06-14T05:06:50.840625Z","updateTime":"2022-06-14T05:07:36.130637Z"},{"name":"projects/dashboard-marmoreli/releases/firebase.storage/dashboard-marmoreli.appspot.com","rulesetName":"projects/dashboard-marmoreli/rulesets/0134fd53-c3dd-4251-8205-d91032c95a6e","createTime":"2022-06-14T20:00:42.731005Z","updateTime":"2022-06-14T20:00:55.488158Z"}]}
+[debug] [2022-12-12T21:29:24.399Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76 [none]
+[debug] [2022-12-12T21:29:25.420Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76 200
+[debug] [2022-12-12T21:29:25.420Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/dashboard-marmoreli/rulesets/7d4185b1-6782-4a83-9afb-bd1c9ecc9d76 [omitted]
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[info] i  hosting[dashboard-marmoreli]: beginning deploy... 
+[info] i  hosting[dashboard-marmoreli]: found 13 files in build 
+[debug] [2022-12-12T21:29:25.474Z] [hosting] uploading with 200 concurrency
+[debug] [2022-12-12T21:29:26.821Z] [hosting] hash cache [YnVpbGQ] stored for 13 files
+[debug] [2022-12-12T21:29:26.822Z] [hosting][hash queue][FINAL] {"max":1318,"min":39,"avg":161.6153846153846,"active":0,"complete":13,"success":13,"errored":0,"retried":0,"total":13,"elapsed":1339}
+[debug] [2022-12-12T21:29:26.824Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/317041427097/sites/dashboard-marmoreli/versions/f54a646984894bb4:populateFiles [none]
+[debug] [2022-12-12T21:29:26.824Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/317041427097/sites/dashboard-marmoreli/versions/f54a646984894bb4:populateFiles {"files":{"/asset-manifest.json":"38f2581266f27e59815e4e5f867cfe19966d05471cb0703f90772f11fb4883f4","/favicon.ico":"cdab02b0827a775efc0d04192949f406a7e60ab9326dd978f7bb06bc513cbe1e","/index.html":"0ab01804644514741cd2979f79478becee201aeb5f4f01f8423d93fd219785da","/static/css/main.a845c132.css":"176859fc120e8132d6ae1680c0996cec4c772483164af189804891825b514dcf","/static/js/main.e37e6332.js.LICENSE.txt":"2b534b95585549c3dfc35ef49c5683457e283fe1c7e080a82503c65f25abf5c1","/static/css/main.a845c132.css.map":"095a9da4386dcec0006bb07db6b293f2588b3376e255ddd03b85b54bc8a60b43","/foto3.png":"d0c1d55ad083196968f8be30343d8293e02bc757c2c511e4a50f4007428ad7e1","/pngimg.png":"3e921451f3eb3f21f83fafd5e1eaad73d53fa923ddded40e54c0c44f3a1d3156","/pngwing.com.png":"02567276199742470024030abfe37c3de1bb024c6b6253c28792240c9cf56438","/foto2.png":"56791e924c0e25dda9747a5a838eccb3af546029f073e48df922bca224369616","/Logo.jpg":"be51df77b487f2bb12c84261a5b56270730677d88e00daa3fc7ad9d1052b2322","/static/js/main.e37e6332.js":"4f8a4f366f85557328b09e2877c922315431a218955d02f83eeee2ee0be5885e","/static/js/main.e37e6332.js.map":"fff7439fe427a92510e1c8f8e9efe937aea528f6e471a3cdc8def9f8491734c3"}}
+[debug] [2022-12-12T21:29:28.470Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/317041427097/sites/dashboard-marmoreli/versions/f54a646984894bb4:populateFiles 200
+[debug] [2022-12-12T21:29:28.471Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/317041427097/sites/dashboard-marmoreli/versions/f54a646984894bb4:populateFiles {"uploadRequiredHashes":["3e921451f3eb3f21f83fafd5e1eaad73d53fa923ddded40e54c0c44f3a1d3156","38f2581266f27e59815e4e5f867cfe19966d05471cb0703f90772f11fb4883f4","095a9da4386dcec0006bb07db6b293f2588b3376e255ddd03b85b54bc8a60b43","4f8a4f366f85557328b09e2877c922315431a218955d02f83eeee2ee0be5885e","fff7439fe427a92510e1c8f8e9efe937aea528f6e471a3cdc8def9f8491734c3","0ab01804644514741cd2979f79478becee201aeb5f4f01f8423d93fd219785da","176859fc120e8132d6ae1680c0996cec4c772483164af189804891825b514dcf"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files"}
+[debug] [2022-12-12T21:29:28.474Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/3e921451f3eb3f21f83fafd5e1eaad73d53fa923ddded40e54c0c44f3a1d3156 [none]
+[debug] [2022-12-12T21:29:28.474Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/3e921451f3eb3f21f83fafd5e1eaad73d53fa923ddded40e54c0c44f3a1d3156 [stream]
+[debug] [2022-12-12T21:29:28.478Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/38f2581266f27e59815e4e5f867cfe19966d05471cb0703f90772f11fb4883f4 [none]
+[debug] [2022-12-12T21:29:28.478Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/38f2581266f27e59815e4e5f867cfe19966d05471cb0703f90772f11fb4883f4 [stream]
+[debug] [2022-12-12T21:29:28.480Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/095a9da4386dcec0006bb07db6b293f2588b3376e255ddd03b85b54bc8a60b43 [none]
+[debug] [2022-12-12T21:29:28.481Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/095a9da4386dcec0006bb07db6b293f2588b3376e255ddd03b85b54bc8a60b43 [stream]
+[debug] [2022-12-12T21:29:28.482Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/4f8a4f366f85557328b09e2877c922315431a218955d02f83eeee2ee0be5885e [none]
+[debug] [2022-12-12T21:29:28.483Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/4f8a4f366f85557328b09e2877c922315431a218955d02f83eeee2ee0be5885e [stream]
+[debug] [2022-12-12T21:29:28.485Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/fff7439fe427a92510e1c8f8e9efe937aea528f6e471a3cdc8def9f8491734c3 [none]
+[debug] [2022-12-12T21:29:28.485Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/fff7439fe427a92510e1c8f8e9efe937aea528f6e471a3cdc8def9f8491734c3 [stream]
+[debug] [2022-12-12T21:29:28.487Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/0ab01804644514741cd2979f79478becee201aeb5f4f01f8423d93fd219785da [none]
+[debug] [2022-12-12T21:29:28.488Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/0ab01804644514741cd2979f79478becee201aeb5f4f01f8423d93fd219785da [stream]
+[debug] [2022-12-12T21:29:28.489Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/176859fc120e8132d6ae1680c0996cec4c772483164af189804891825b514dcf [none]
+[debug] [2022-12-12T21:29:28.489Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/176859fc120e8132d6ae1680c0996cec4c772483164af189804891825b514dcf [stream]
+[debug] [2022-12-12T21:29:28.491Z] [hosting][populate queue][FINAL] {"max":1655,"min":1655,"avg":1655,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1673}
+[debug] [2022-12-12T21:29:28.491Z] [hosting] uploads queued: 7
+[debug] [2022-12-12T21:29:30.459Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/176859fc120e8132d6ae1680c0996cec4c772483164af189804891825b514dcf 200
+[debug] [2022-12-12T21:29:30.460Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/176859fc120e8132d6ae1680c0996cec4c772483164af189804891825b514dcf [stream]
+[debug] [2022-12-12T21:29:30.568Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/0ab01804644514741cd2979f79478becee201aeb5f4f01f8423d93fd219785da 200
+[debug] [2022-12-12T21:29:30.568Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/0ab01804644514741cd2979f79478becee201aeb5f4f01f8423d93fd219785da [stream]
+[debug] [2022-12-12T21:29:30.691Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/3e921451f3eb3f21f83fafd5e1eaad73d53fa923ddded40e54c0c44f3a1d3156 200
+[debug] [2022-12-12T21:29:30.692Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/3e921451f3eb3f21f83fafd5e1eaad73d53fa923ddded40e54c0c44f3a1d3156 [stream]
+[debug] [2022-12-12T21:29:30.773Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/095a9da4386dcec0006bb07db6b293f2588b3376e255ddd03b85b54bc8a60b43 200
+[debug] [2022-12-12T21:29:30.774Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/095a9da4386dcec0006bb07db6b293f2588b3376e255ddd03b85b54bc8a60b43 [stream]
+[debug] [2022-12-12T21:29:31.428Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/38f2581266f27e59815e4e5f867cfe19966d05471cb0703f90772f11fb4883f4 200
+[debug] [2022-12-12T21:29:31.428Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/38f2581266f27e59815e4e5f867cfe19966d05471cb0703f90772f11fb4883f4 [stream]
+[debug] [2022-12-12T21:29:35.056Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/fff7439fe427a92510e1c8f8e9efe937aea528f6e471a3cdc8def9f8491734c3 200
+[debug] [2022-12-12T21:29:35.057Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dashboard-marmoreli/versions/f54a646984894bb4/files/fff7439fe427a92510e1c8f8e9efe937aea528f6e471a3cdc8def9f8491734c3 [stream]

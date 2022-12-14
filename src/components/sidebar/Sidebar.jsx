@@ -38,7 +38,7 @@ const Sidebar = () => {
           <li>
             <Link to="/users" style={{ textDecoration: "none" }}>
               <PeopleIcon className="icon" />
-              <span>Clientes</span>
+              <span>Acolhidos</span>
             </Link>
           </li>
           <li>

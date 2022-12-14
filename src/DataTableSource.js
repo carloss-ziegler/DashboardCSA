@@ -6,7 +6,12 @@ export const userColumns = [
   },
   {
     field: "email",
-    headerName: "Email",
+    headerName: "RG",
+    width: 200,
+  },
+  {
+    field: "cpf",
+    headerName: "CPF",
     width: 200,
   },
 

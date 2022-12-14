@@ -8,9 +8,9 @@ export const userInputs = [
   },
   {
     id: "email",
-    label: "E-mail",
-    type: "email",
-    placeholder: "example@gmail.com",
+    label: "RG",
+    type: "text",
+    placeholder: "9999-999",
   },
   {
     id: "phone",
